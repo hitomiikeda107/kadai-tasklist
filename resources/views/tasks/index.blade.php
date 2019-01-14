@@ -10,7 +10,7 @@
                 <tr>
                     <th>id</th>
                     <th>ステータス</th>
-                    <th>タスク</th>
+                    <th>内容</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +23,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{ $tasks->render("pagination::bootstrap-4") }}
     @endif
         {!! link_to_route("tasks.create", "新規タスクの追加", null, ["class" => "btn btn-primary"]) !!}
 
